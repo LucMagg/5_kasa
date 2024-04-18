@@ -9,6 +9,10 @@
     height: 209px;
     background-color: $footer-color;
 
+    @media (max-width: $mobile-size) {
+        gap: 0;
+    }
+
     &__logo {
         margin-top: 70px;
         width: 122px;
@@ -23,5 +27,12 @@
         color: $alt-text-color;
         font-size: 24px;
         font-weight: 500;
+
+        @media (max-width: $mobile-size) {
+            font-size: 12px;
+            width: 130px;
+            text-align: center;
+        }
+
     }
 }
