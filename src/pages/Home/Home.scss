@@ -1,0 +1,61 @@
+@import '../../assets/mainstyles.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding-inline: 100px;
+
+  &__header {
+    height: 223px;
+    width: 100%;
+    border-radius: 25px;
+    position: relative;
+    background-color: rgba(0,0,0,1);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    
+    & img {    
+      opacity: 0.4;
+      @include img-cover;
+      border-radius: 25px;
+    }
+
+    & p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 16px);
+      height: 100%;
+      @include flex-column-center;
+      color: $alt-text-color;
+      font-size: 48px;
+      font-weight: 700;
+      z-index: 1;
+      @include text-shadow;
+      @media (max-width: 1000px) {
+          font-size: 36px;
+      } 
+    }
+  }
+
+  &__gallery {
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: calc(100vw * 5 / 144);
+    border-radius: 10px;
+    background-color: $alt-backgrd-color;
+    height: auto;
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 660px) {
+      grid-template-columns: 1fr;
+    }
+    & h2 {
+      display: none;
+    }
+  }
+}

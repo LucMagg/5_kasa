@@ -1,0 +1,14 @@
+@import '../../assets/mainstyles.scss';
+
+.tag {
+    @include flex-column-center;
+    box-sizing: border-box;
+    min-width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: $main-color;
+    color: $alt-text-color;
+    font-size: 14px;
+    font-weight: 500;
+    padding-inline: 15px;
+}

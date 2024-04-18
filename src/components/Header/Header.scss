@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100vw - 200px);
+    padding-inline: 100px;
+}
+
+h1 {
+    display: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+li {
+    list-style: none;
+    padding-left: 57px;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0,0,0,1);
+    font-size: 24px;
+    font-weight: 500;
+    &.active {
+        text-decoration: underline;
+    }
+}

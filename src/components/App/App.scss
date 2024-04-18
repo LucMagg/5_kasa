@@ -1,0 +1,7 @@
+@import '../../assets/mainstyles.scss';
+
+.app {
+  background-color: $backgrd-color;
+  @include flex-column-center;
+  gap: 50px;
+}

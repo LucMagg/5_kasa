@@ -1,0 +1,32 @@
+@import '../../assets/mainstyles.scss';
+
+.about {
+    @include flex-column-center;
+    width: calc(100vw - 200px);
+    gap: 38px;
+
+    &__header {
+        height: 223px;
+        width: 100%;
+        border-radius: 25px;
+        background-color: rgba(0,0,0,1);
+        
+        & img {    
+          opacity: 0.7;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 25px;
+        }
+    }
+
+    &__dropdown {
+        @include flex-column-center;
+        width: calc(100% - 200px);
+        gap: 30px;
+
+        &__item {
+            width: 100%;
+        }
+    }
+}

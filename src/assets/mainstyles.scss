@@ -1,0 +1,24 @@
+/***************************** Mixins *****************************/
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+@mixin text-shadow {
+    text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+}
+
+@mixin img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/***************************** Variables *****************************/
+$backgrd-color: rgba(255,255,255,1);
+$alt-backgrd-color: rgba(246,246,246,1);
+$main-color: rgba(255, 96, 96, 1);
+$alt-text-color: rgba(255,255,255,1);
+$footer-color: rgba(0,0,0,1);
