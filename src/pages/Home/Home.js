@@ -9,13 +9,13 @@ export default function Home() {
     const rentals = useLoaderData();
 
     return (
-        <div className='main'>
-            <div className='main__header'>
-                <img src={ backgroundImage } alt=""></img>
-                <p>Chez vous, partout et ailleurs</p>
+        <div className='home-main'>
+            <div className='home-main__header'>
+                <img className='home-main__header__img' src={ backgroundImage } alt=""></img>
+                <p className='home-main__header__text'>Chez vous, partout et ailleurs</p>
             </div>
-            <div className="main__gallery">
-                <h2>Gallerie</h2>
+            <div className='home-main__gallery'>
+                <h2 className='home-main__gallery__title'>Galerie</h2>
                 {rentals.map(rental => {
                     return <div key={rental.id}>
                         <Link to={`/rental/${rental.id}`}>
