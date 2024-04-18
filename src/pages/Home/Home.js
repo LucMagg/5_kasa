@@ -9,7 +9,7 @@ export default function Home() {
     const rentals = useLoaderData();
 
     return (
-        <main className='main'>
+        <div className='main'>
             <div className='main__header'>
                 <img src={ backgroundImage } alt=""></img>
                 <p>Chez vous, partout et ailleurs</p>
@@ -24,6 +24,6 @@ export default function Home() {
                     </div>
                 })}
             </div>
-        </main>
+        </div>
     )
 }

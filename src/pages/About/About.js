@@ -7,7 +7,7 @@ import './About.scss'
 
 export default function About() {
     return (
-        <main className='about'>
+        <div className='about'>
             <div className='about__header'>
                 <img src={backgroundImage} alt=""></img>
             </div>
@@ -18,6 +18,6 @@ export default function About() {
                     </div>
                 })}
             </div>              
-        </main>
+        </div>
     )
 }

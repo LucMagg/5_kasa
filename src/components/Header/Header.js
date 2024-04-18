@@ -6,13 +6,18 @@ import './Header.scss'
 
 export default function Header() {
     
-    return <header>
-        <Logo headerOrFooter={"header"}/>
-        <h1>Kasa</h1>
+    return <header className='header'>
+        <div className='header__logo'>
+            <h1 className='header__title'>Kasa</h1>
+        </div>
         <nav>
-            <ul>
-                <li><NavLink className={({isActive}) => isActive ? 'active' : ''} to='/'>Accueil</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? 'active' : ''} to='/about'>A Propos</NavLink></li>
+            <ul className='header__link-list'>
+                <li className='header__link-list__link'>
+                    <NavLink className={`header__link-list__link__to ${({isActive}) => isActive ? 'active' : ''}`} to='/'>Accueil</NavLink>
+                </li>
+                <li className='header__link-list__link'>
+                    <NavLink className={`header__link-list__link__to ${({isActive}) => isActive ? 'active' : ''}`} to='/about'>A Propos</NavLink>
+                </li>
             </ul>
         </nav>
     </header>

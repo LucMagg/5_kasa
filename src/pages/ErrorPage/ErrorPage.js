@@ -7,10 +7,10 @@ export default function ErrorPage() {
     console.log(error)
 
     return (
-        <main className='error'>
+        <div className='error'>
             <p className="error__status">{error.status}</p>
             <p className="error__message">{error.status === 404 ? 'Oups! La page que vous demandez n\'existe pas.' : error.statusText}</p>
             <Link to='/'>Retourner sur la page d’accueil</Link>
-        </main>
+        </div>
     )
 }

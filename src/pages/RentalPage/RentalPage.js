@@ -1,5 +1,5 @@
 import {useLoaderData } from 'react-router-dom'
-import { itemToList } from '../../assets/utils'
+import { itemToList, urlToImg } from '../../assets/utils'
 
 import Carousel from '../../components/Carousel/Carousel'
 import Dropdown from '../../components/Dropdown/Dropdown'
@@ -31,10 +31,10 @@ export default function RentalPage() {
     }
     const hostName = splitName(rental.host.name)
 
-    const picList = rental.pictures.map((pic) => {return (<img src={pic} alt=''></img>)})
+    const picList = urlToImg(rental)
 
     return (
-        <main className='main'>
+        <div className='main'>
             <div className='main__carousel-container'>
                 <Carousel items={picList} />
             </div>
@@ -72,6 +72,6 @@ export default function RentalPage() {
                     <Dropdown title="Équipements" content={itemToList(rental.equipments)} />
                 </div>
             </div>            
-        </main>
+        </div>
     )
 }

@@ -37,11 +37,6 @@ export default function Carousel ({items}) {
         return () => resetTimeout()
     },[activeSlide])
 
-    /*useEffect(() => {
-        recurrentTimeout = setTimeout(setActiveSlide(targetSlide(1)),slideTimer)
-        return clearTimeout(recurrentTimeout)
-    }, [activeSlide])*/
-
     return (
         <div className='carousel-container'>
             {items.map((item,index) => {return <div className='carousel-container__slide' key={index} style={{transform: `translateX(${-activeSlide * 100}%)`}}>{item}</div>})}
@@ -53,7 +48,6 @@ export default function Carousel ({items}) {
                     <button className='carousel__button right' aria-label='Suivant' onClick={() => slide("slide-to-right")}>
                         <span className='carousel__button__right-icon' aria-hidden='true'></span>
                     </button>
-                    <p className='carousel__slide-number'>{`${activeSlide + 1}/${items.length}`}</p>
                 </>
             }
         </div>

@@ -98,3 +98,23 @@
   }
   
 }
+
+.rental-pic {
+  width: calc(100vw - 200px);
+  height: inherit;
+  &__image {
+    width: calc(100vw - 200px);
+    position: relative;
+    object-fit: cover;
+  }
+  &__index {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    right: 50%;
+    z-index: 1;
+    color: $alt-text-color;
+    font-weight: 500;
+    font-size: 22px;
+}
+}
