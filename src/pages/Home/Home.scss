@@ -22,12 +22,17 @@
 
 		@media (max-width: $mobile-size) {
 			height: 111px;
+			border-radius: 10px;
 		}
 		
 		&__img {    
 			opacity: 0.4;
 			@include img-cover;
 			border-radius: 25px;
+
+			@media (max-width: $mobile-size) {
+				border-radius: 10px;
+			}
 		}
 
 		&__text {

@@ -4,8 +4,11 @@
   background-color: $backgrd-color;
   @include flex-column-center;
   gap: 50px;
+  margin-top: 45px 0 0 0;
+  
 
   @media (max-width: $mobile-size) {
     gap: 27px;
+    margin-top: 20px;
   }
 }

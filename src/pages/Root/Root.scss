@@ -1,3 +1,10 @@
+@import '../../assets/mainstyles.scss';
+
+
 main {
    min-height: calc(100vh - (168px + 209px));
+
+   @media (max-width: $mobile-size) {
+      min-height: calc(100vh - (67px + 209px));
+   }
 }
