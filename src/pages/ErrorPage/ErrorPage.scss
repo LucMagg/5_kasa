@@ -1,21 +1,35 @@
 @import '../../assets/mainstyles.scss';
 
-.error{
+.error-main{
     @include flex-column-center;
     gap: 139px;
     padding-block: 89px;
+
+    @media (max-width: $mobile-size) {
+        gap: 113px;
+        padding-block: 113px;
+    }
 
     &__status {
         font-size: 288px;
         font-weight: 700;
         color: $main-color;
         line-height: 263px;
+
+        @media (max-width: $mobile-size) {
+            font-size: 96px;
+            line-height: 99px;
+        }
     }
 
     &__message {
         font-size: 36px;
         font-weight: 500;
         color: $main-color;
+
+        @media (max-width: $mobile-size) {
+            font-size: 18px;
+        }
     }
 }
 

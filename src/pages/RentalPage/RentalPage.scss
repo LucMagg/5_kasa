@@ -1,6 +1,6 @@
 @import '../../assets/mainstyles.scss';
 
-.main {
+.rental-main {
 	@include flex-column-center;
 	gap: 30px;
 	padding-inline: 100px;
@@ -108,7 +108,7 @@
 		position: relative;
 		object-fit: cover;
 	}
-	
+
 	&__index {
 		position: absolute;
 		bottom: 20px;

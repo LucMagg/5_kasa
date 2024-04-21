@@ -7,7 +7,7 @@
   }
 
 @mixin text-shadow {
-    text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+    text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 0 4px 4px rgba(0,0,0,0.5);
 }
 
 @mixin img-cover {
