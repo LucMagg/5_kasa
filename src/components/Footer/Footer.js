@@ -1,5 +1,3 @@
-import Logo from "../Logo/Logo"
-
 import './Footer.scss'
 
 export default function Footer (){

@@ -12,8 +12,11 @@ export default function ErrorPage() {
     return (<>
         <Header />
         <main className='error-main'>
-            <p className="error-main__status">{error.status}</p>
-            <p className="error-main__message">{error.status === 404 ? 'Oups! La page que vous demandez n\'existe pas.' : error.statusText}</p>
+            <p className='error-main__status'>404</p>
+            <div className='error-main__message'>
+                <span className='error-main__message__block'>Oups! La page que </span>
+                <span className='error-main__message__block'> vous demandez n'existe pas.</span>
+            </div>
             <Link to='/'>Retourner sur la page d’accueil</Link>
         </main>
         <Footer />

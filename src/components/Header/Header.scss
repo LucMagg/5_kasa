@@ -5,12 +5,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: calc(100vw - 200px);
-    padding-inline: 100px;
+    width: calc(100vw - (200 * $base-desktop-width));
+    padding-inline: calc(100 * $base-desktop-width);
 
     @media (max-width: $mobile-size) {
-        width: calc(100vw - 40px);
-    padding-inline: 20px;
+        width: calc(100vw - (40 * $base-mobile-width));
+        padding-inline: 0;
     }
 
     &__logo {
@@ -37,10 +37,10 @@
 
         &__link {
             list-style: none;
-            padding-left: 57px;
+            padding-left: calc(57 * $base-desktop-width);
 
             @media (max-width: $mobile-size) {
-                padding-left: 26px;
+                padding-left: calc(26 * $base-mobile-width);
             }
 
             &__to {

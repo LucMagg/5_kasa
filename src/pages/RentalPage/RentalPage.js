@@ -72,7 +72,7 @@ export default function RentalPage() {
                         })}
                     </div>
                 </div>
-                <div className="rental-main__items__container">
+                <div className="rental-main__items__container rental-main__items__host-stars">
                     <div className='rental-main__items__container__host'>
                         <div className='rental-main__items__container__host__name'>{hostName}</div>
                         <img className='rental-main__items__container__host__pic' src={rental.host.picture} alt={`${rental.host.name}`}></img>

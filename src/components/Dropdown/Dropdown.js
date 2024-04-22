@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { v4 as uuidv4 } from "uuid"
 
 import './Dropdown.scss'
 
@@ -10,7 +9,7 @@ export default function Dropdown({title, content}) {
         collapse ? setCollapse(false) : setCollapse(true)
     }
 
-    return <div>
+    return <>
         <div className="dropdown">
             <p className="dropdown__title">{title}</p>
             <button className="dropdown__button" type="button" onClick={click} aria-label={collapse ? 'fermer' : 'ouvrir'}>
@@ -20,5 +19,5 @@ export default function Dropdown({title, content}) {
         <div className={`dropdown-content ${collapse.toString()}`}>
             {collapse && content}
         </div>
-        </div> 
+        </> 
 }

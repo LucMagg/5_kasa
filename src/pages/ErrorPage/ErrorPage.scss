@@ -7,7 +7,8 @@
 
     @media (max-width: $mobile-size) {
         gap: 113px;
-        padding-block: 113px;
+        padding-block: 86px;
+        min-height: 0;
     }
 
     &__status {
@@ -29,6 +30,14 @@
 
         @media (max-width: $mobile-size) {
             font-size: 18px;
+            width: 260px;
+            text-align: center;
+        }
+
+        &__block {
+            @media (max-width: $mobile-size) {
+                display: block;
+            }
         }
     }
 }

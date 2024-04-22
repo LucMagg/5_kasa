@@ -4,12 +4,15 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	gap: 50px;
-	padding-inline: 100px;
+	width: calc(100vw - (200 * $base-desktop-width));
+	padding-inline: calc(100 * $base-desktop-width);
 
 	@media (max-width: $mobile-size) {
 		gap: 22px;
-		padding-inline: 20px;
+		width: calc(100vw - (40 * $base-mobile-width));
+		padding-inline: 0;
 	}
 
 	&__header {
@@ -23,6 +26,7 @@
 		@media (max-width: $mobile-size) {
 			height: 111px;
 			border-radius: 10px;
+			box-shadow: none;
 		}
 		
 		&__img {    
@@ -37,11 +41,15 @@
 
 		&__text {
 			position: absolute;
-			top: 0;
+			top: 50%;
 			left: 0;
-			width: calc(100% - 16px);
-			height: 100%;
-			@include flex-column-center;
+			right: 0;
+			transform: translateY(-50%);
+			display: inline;
+			text-align: center;
+			vertical-align: middle;
+			padding-inline: 16px;
+			text-wrap: wrap;
 			color: $alt-text-color;
 			font-size: 48px;
 			font-weight: 700;
@@ -49,31 +57,56 @@
 			@include text-shadow;
 
 			@media (max-width: $mobile-size) {
-				width: calc(100% - 110px);
 				font-size: 24px;
 				text-align: left;
 				text-shadow: none;
 				padding-left: 16px;
 			}
+
+			&__to-wrap {
+				@media (max-width: $mobile-size) {
+					display: block;
+				}
+			}
 		}
 	}
 
 	&__gallery {
-		overflow: auto;
+		width: calc(100% - (100 * $base-desktop-width));
+		padding: calc(50 * $base-desktop-width);
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr;
-		gap: calc(100vw * 5 / 144);
+		gap: calc(50 * $base-desktop-width);
 		border-radius: 10px;
 		background-color: $alt-backgrd-color;
 		height: auto;
 
 		@media (max-width: $mobile-size) {
+			width: calc(100vw - (40 * $base-mobile-width));
 			grid-template-columns: 1fr;
+			background-color: $backgrd-color;
+			padding: 0;
 		}
 
 		&__title {
 			display: none;
+		}
+
+		&__card {
+			width: calc(340 * $base-desktop-width);
+			height: calc(340 * $base-desktop-width);
+
+			@media (max-width: $mobile-size) {
+				width: calc(335 * $base-mobile-width);
+				height: calc(255 * $base-mobile-width);
+			}
+
+			&__link {
+				text-decoration: none;
+				width: inherit;
+				height: inherit;
+			}
 		}
 	}
 }
