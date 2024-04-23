@@ -15,8 +15,11 @@ export default function App() {
     {
       path: "/",
       element: <Root />,
-      errorElement: <ErrorPage />,
+      errorElement: <ErrorPage isInRoot={false} />,
       children : [
+        {
+          errorElement: <ErrorPage isInRoot={true} />
+        },
         {
           index: true,
           element: <Home />,

@@ -27,10 +27,12 @@
         font-size: 36px;
         font-weight: 500;
         color: $main-color;
+        text-wrap: wrap;
+        padding-inline: 20px;
 
         @media (max-width: $mobile-size) {
             font-size: 18px;
-            width: 260px;
+            width: calc(300 * $base-mobile-width);
             text-align: center;
         }
 
@@ -39,6 +41,11 @@
                 display: block;
             }
         }
+    }
+
+    &__link {
+        text-decoration: underline;
+        color: #000000;
     }
 }
 
