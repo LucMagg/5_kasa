@@ -25,10 +25,10 @@ export default function Carousel ({items}) {
             {
                 items.length > 1 && <>
                     <button className='carousel__button left' aria-label='Précédent' onClick={() => setActiveSlide(slide('left', activeSlide, items))}>
-                        <span className='carousel__button__left-icon' aria-hidden='true'></span>
+                        <span className='carousel__button__icon left' aria-hidden='true'></span>
                     </button>
                     <button className='carousel__button right' aria-label='Suivant' onClick={() => setActiveSlide(slide('right', activeSlide, items))}>
-                        <span className='carousel__button__right-icon' aria-hidden='true'></span>
+                        <span className='carousel__button__icon right' aria-hidden='true'></span>
                     </button>
                     {items.length > 1 && <p className="carousel__index">{`${activeSlide + 1}/${items.length}`}</p>}
                 </>
