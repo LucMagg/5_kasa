@@ -2,12 +2,10 @@
 
 .about-main {
     @include flex-column-center;
-    width: calc(100vw - (200 * $base-desktop-width));
-	padding-inline: calc(100 * $base-desktop-width);
     gap: 38px;
+    width: 100%;
 
     @media (max-width: $mobile-size) {
-        width: calc(100vw - (40 * $base-mobile-width));
         gap: 19px;
     }
 
@@ -25,9 +23,7 @@
         
         &__img {    
           opacity: 0.7;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
+          @include img-cover;
         }
     }
 

@@ -1,18 +1,11 @@
 @import '../../assets/mainstyles.scss';
 
 .home-main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	@include flex-column-center;
 	gap: 50px;
-	width: calc(100vw - (200 * $base-desktop-width));
-	padding-inline: calc(100 * $base-desktop-width);
 
 	@media (max-width: $mobile-size) {
 		gap: 22px;
-		width: calc(100vw - (40 * $base-mobile-width));
-		padding-inline: 0;
 	}
 
 	&__header {
@@ -54,7 +47,7 @@
 			font-size: 48px;
 			font-weight: 700;
 			z-index: 1;
-			@include text-shadow;
+			text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 0 4px 4px rgba(0,0,0,0.5);
 
 			@media (max-width: $mobile-size) {
 				font-size: 24px;
@@ -80,10 +73,9 @@
 		gap: calc(50 * $base-desktop-width);
 		border-radius: 10px;
 		background-color: $alt-backgrd-color;
-		height: auto;
 
 		@media (max-width: $mobile-size) {
-			width: calc(100vw - (40 * $base-mobile-width));
+			width: 100%;
 			grid-template-columns: 1fr;
 			background-color: $backgrd-color;
 			padding: 0;
@@ -104,8 +96,6 @@
 
 			&__link {
 				text-decoration: none;
-				width: inherit;
-				height: inherit;
 			}
 		}
 	}

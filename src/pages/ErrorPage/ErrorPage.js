@@ -1,4 +1,4 @@
-import { useRouteError, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 
@@ -6,7 +6,6 @@ import Footer from '../../components/Footer/Footer'
 import './ErrorPage.scss'
 
 export default function ErrorPage(isInRoot) {
-    const error = useRouteError()
 
     return (<>
         {isInRoot && <Header />}

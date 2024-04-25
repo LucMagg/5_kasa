@@ -3,8 +3,12 @@
 
 main {
    min-height: calc(100vh - (168px + 209px));
+   width: calc(100vw - (200 * $base-desktop-width));
+   display: flex;
+   flex-direction: column;
 
    @media (max-width: $mobile-size) {
       min-height: calc(100vh - (67px + 209px));
+      width: calc(100vw - (40 * $base-mobile-width));
    }
 }
