@@ -17,6 +17,7 @@ export default function App() {
       children : [
         
         {
+          path: "/index",
           index: true,
           element: <Home />,
           loader: dataLoader,

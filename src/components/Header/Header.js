@@ -14,7 +14,7 @@ export default function Header() {
         <nav>
             <ul className='header__link-list'>
                 <li className='header__link-list__link'>
-                    <NavLink className={`header__link-list__link__to ${({isActive}) => isActive ? 'active' : ''}`} to='/'>Accueil</NavLink>
+                    <NavLink className={`header__link-list__link__to ${({isActive}) => isActive ? 'active' : ''}`} to='/index'>Accueil</NavLink>
                 </li>
                 <li className='header__link-list__link'>
                     <NavLink className={`header__link-list__link__to ${({isActive}) => isActive ? 'active' : ''}`} to='/about'>A Propos</NavLink>
