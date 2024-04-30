@@ -11,6 +11,10 @@
         min-height: 0;
     }
 
+    &__title {
+        display: none;
+    }
+
     &__status {
         font-size: 288px;
         font-weight: 700;
