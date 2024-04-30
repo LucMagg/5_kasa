@@ -1,25 +1,21 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-
-import Root from '../../pages/Root/Root'
+import Layout from "../../pages/Layout/Layout"
 import Home from '../../pages/Home/Home'
 import ErrorPage from '../../pages/ErrorPage/ErrorPage'
 import About from '../../pages/About/About'
 import RentalPage from '../../pages/RentalPage/RentalPage'
 
-import './App.scss'
 import { dataLoader, getDataById } from '../../assets/loader'
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 export default function App() {
  
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Root />,
-      errorElement: <ErrorPage isInRoot={false} />,
+      element: <Layout />,
+      errorElement: <ErrorPage />,
       children : [
-        {
-          errorElement: <ErrorPage isInRoot={true} />
-        },
+        
         {
           index: true,
           element: <Home />,

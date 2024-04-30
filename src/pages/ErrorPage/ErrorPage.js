@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom'
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
+import Layout from '../Layout/Layout'
 
 
 import './ErrorPage.scss'
 
-export default function ErrorPage(isInRoot) {
 
-    return (<>
-        {isInRoot && <Header />}
+export default function ErrorPage() {
+
+    return (<Layout>
         <main className='error-main'>
             <p className='error-main__status'>404</p>
             <div className='error-main__message'>
@@ -17,6 +16,7 @@ export default function ErrorPage(isInRoot) {
             </div>
             <Link className='error-main__link' to='/'>Retourner sur la page d’accueil</Link>
         </main>
-        {isInRoot && <Footer />}
-    </>)
+
+    </Layout>
+    )
 }

@@ -5,7 +5,7 @@
     height: 100%;
     border-radius: 10px;
     position: relative;
-    background-color: $main-color;
+    
     &::after {
         content : '';
         border-radius: 10px;
@@ -19,6 +19,7 @@
     }
 
     &__pic {
+        background-color: $main-color;
         @include img-cover;
         border-radius: 10px;
     }
@@ -33,6 +34,5 @@
         color: $alt-text-color;
         font-size: 18px;
         font-weight: 700;
-        text-wrap: wrap;
     }
 }

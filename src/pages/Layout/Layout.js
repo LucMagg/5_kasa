@@ -3,13 +3,13 @@ import {Outlet} from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 
-import './Root.scss'
+import './Layout.scss'
 
-export default function Root() {
+export default function Layout({children}) {
     return <>
         <Header />
         <main>
-            <Outlet />
+            {children ?? <Outlet />}
         </main>
         <Footer />
     </>

@@ -1,11 +1,14 @@
 import { NavLink } from 'react-router-dom'
 
+import Logo from '../Logo/Logo'
+
 import './Header.scss'
 
 export default function Header() {
     
     return <header className='header'>
         <div className='header__logo'>
+            <Logo color="#FF6060" />
             <h1 className='header__title'>Kasa</h1>
         </div>
         <nav>

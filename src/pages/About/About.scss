@@ -9,6 +9,10 @@
         gap: 19px;
     }
 
+    &__title {
+        display: none;
+    }
+
     &__header {
         height: 223px;
         width: 100%;
@@ -35,6 +39,10 @@
         @media (max-width: $mobile-size) {
             width: 100%;
             gap: 20px;
+        }
+
+        &__title {
+            display: none;
         }
 
         &__item {
