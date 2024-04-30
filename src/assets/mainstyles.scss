@@ -20,5 +20,5 @@ $alt-text-color: rgba(255,255,255,1);
 $footer-color: rgba(0,0,0,1);
 
 $mobile-size: 768px;
-$base-desktop-width: calc(100vw / 1440);
-$base-mobile-width: calc(100vw / 375);
+$base-desktop-width: round(nearest, 100vw / 1440, 0.01vw);
+$base-mobile-width: round(nearest, 100vw / 375, 0.01vw);
