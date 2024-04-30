@@ -61,7 +61,7 @@ export default function RentalPage() {
             <div className='rental-main__items'>
                 <div className="rental-main__items__container">
                     <div className='rental-main__items__container__title'>
-                        <p className='rental-main__items__container__title__title'>{rental.title}</p>
+                        <h2 className='rental-main__items__container__title__title'>{rental.title}</h2>
                         <p className='rental-main__items__container__title__location'>{rental.location}</p>
                     </div>
                     <div className='rental-main__items__container__tags'>
@@ -86,9 +86,11 @@ export default function RentalPage() {
             </div>
             <div className='rental-main__details'>
                 <div className='rental-main__details__dropdown'>
+                    <h3 className='rental-main__details__dropdown__title'>Description</h3>
                     <Dropdown title="Description" content={rental.description} />
                 </div>
                 <div className='rental-main__details__dropdown'>
+                    <h3 className='rental-main__details__dropdown__title'>Équipements</h3>
                     <Dropdown title="Équipements" content={itemToList(rental.equipments)} />
                 </div>
             </div>            
